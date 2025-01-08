@@ -7,7 +7,7 @@
 Export a PyTorch model to ONNX
 ==============================
 
-**Author**: `Ti-Tai Wang <https://github.com/titaiwangms>`_
+**Author**: `Ti-Tai Wang <https://github.com/titaiwangms>`_ and `Thiago Crepaldi <https://github.com/thiagocrepaldi>`_
 
 .. note::
     As of PyTorch 2.5, there are two versions of ONNX Exporter.
@@ -136,7 +136,7 @@ onnx.checker.check_model(onnx_model)
 # Once Netron is open, we can drag and drop our ``my_image_classifier.onnx`` file into the browser or select it after
 # clicking the **Open model** button.
 #
-# .. image:: ../../_static/img/onnx/image_classifier_onnx_modelon_netron_web_ui.png
+# .. image:: ../../_static/img/onnx/image_classifier_onnx_model_on_netron_web_ui.png
 #   :width: 50%
 #
 #
@@ -175,6 +175,7 @@ def to_numpy(tensor):
 
 onnxruntime_input = {k.name: to_numpy(v) for k, v in zip(ort_session.get_inputs(), onnx_input)}
 
+# onnxruntime returns a list of outputs
 onnxruntime_outputs = ort_session.run(None, onnxruntime_input)[0]
 
 ####################################################################

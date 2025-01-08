@@ -7,8 +7,7 @@ Introduction to ONNX
 ====================
 
 Authors:
-`Ti-Tai Wang <https://github.com/titaiwangms>`_, `Justin Chu <https://github.com/justinchuby>`_,
-and `Xavier Dupré <https://github.com/xadupre>`_.
+`Ti-Tai Wang <https://github.com/titaiwangms>`_, and `Thiago Crepaldi <https://github.com/thiagocrepaldi>`_
 
 `Open Neural Network eXchange (ONNX) <https://onnx.ai/>`_ is an open standard
 format for representing machine learning models. The ``torch.onnx`` module provides APIs to
